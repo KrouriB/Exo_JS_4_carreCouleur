@@ -12,10 +12,57 @@
 <body>
 
 	<div id="container">
+		<div id="zone15">
 
+		</div>
 	</div>
 	<script>
+		console.log("a")
+		container = document.getElementById("container")
+		zone15 = document.getElementById("zone15")
+		const couleurs = ["green", "red", "blue", "purple", "pink", "aqua", "darksalmon", "darkorchid", "lightcoral", "mediumseagreen", "plum", "peru", "yellow", "lime", "cornflowerblue", "crimson", "burlywood", "goldenrod", "paleturquoise", "mediumslateblue"]
+		carre = document.createElement("div")
+		carre.classList.add("carre")
+		var i = 0
+		console.log("a")
+		document.querySelector("body").addEventListener("keydown", function (event) { //pointer sur le body car l'enregistrement des touche se fait soit sur le body ou sur un input ,un focus ne peut se faire sur une div.
+			const randomCouleurs = Math.floor(Math.random() * couleurs.length)
+			const key = event.code;
+			console.log(event.code)
+			if (i == 0) {
+				switch (key) {
+					case "ArrowUp":
+						alert("Il n'a rien a enlever andouille")
+						break
+					case "ArrowDown":
+						let newcarre = carre.cloneNode()
+						newcarre.style.backgroundColor = couleurs[randomCouleurs]
+						zone15.appendChild(newcarre)
+						i++
+						break
+					default:
+						console.log(key)
+				}
+			}
+			else if (i > 0 && i < 225) {
+				switch (key) {
+					case "ArrowUp":
+						var allCarre = document.querySelectorAll(".carre")
+						var lastCarre = allCarre[allCarre.length - 1]
+						lastCarre.remove()
+						i--
+						break
+					case "ArrowDown":
+						let newcarre = carre.cloneNode()
+						newcarre.style.backgroundColor = couleurs[randomCouleurs]
+						zone15.appendChild(newcarre)
+						i++
+						break
+				}
+			}
+		})
 
+		console.log("a")
 	</script>
 
 </body>

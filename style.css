@@ -11,3 +11,21 @@
 	height: 100vh;
 	width: 100vw;
 }
+
+#zone15 {
+	width: 959px;
+	height: 959px;
+	padding: 8px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+	gap: 3px;
+}
+
+.carre {
+	width: 60px;
+	height: 60px;
+	background-color: color;
+}

@@ -29,3 +29,7 @@
 	height: 60px;
 	background-color: color;
 }
+
+.cursor{
+	cursor: pointer;
+}

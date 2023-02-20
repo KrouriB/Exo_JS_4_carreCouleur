@@ -17,14 +17,12 @@
 		</div>
 	</div>
 	<script>
-		console.log("a")
 		container = document.getElementById("container")
 		zone15 = document.getElementById("zone15")
 		const couleurs = ["green", "red", "blue", "purple", "pink", "aqua", "darksalmon", "darkorchid", "lightcoral", "mediumseagreen", "plum", "peru", "yellow", "lime", "cornflowerblue", "crimson", "burlywood", "goldenrod", "paleturquoise", "mediumslateblue"]
 		carre = document.createElement("div")
 		carre.classList.add("carre")
 		var i = 0
-		console.log("a")
 		document.querySelector("body").addEventListener("keydown", function (event) { //pointer sur le body car l'enregistrement des touche se fait soit sur le body ou sur un input ,un focus ne peut se faire sur une div.
 			const randomCouleurs = Math.floor(Math.random() * couleurs.length)
 			const key = event.code;
@@ -60,9 +58,76 @@
 						break
 				}
 			}
+			else if (i == 225) {
+				carreSmiley()
+				i++
+				/*switch (allCarre[a]) {
+					case 0 <= a <= 4 || 10 <= a <= 17 || 27 <= a <= 31 || 43 <= a <= 45 || 59 <= a <= 60:
+						allCarre[a].style.backgroundColor = "white"
+						break
+					case 5 <= a <= 9 || 18 <= a <= 19 || 25 <= a <= 26 || a == 32 || a == 42 || a == 46 || a == 58:
+						break
+					case 5 <= a <= 9 || 20 <= a <= 24 || 33 <= a <= 41 || 47 <= a <= 57:
+						break
+				}*/
+			}
 		})
+		function carreSmiley() {
+			var allCarre = document.getElementsByClassName("carre")
+			for (a = 0; a < allCarre.length; a++) {
+				function
+				unCarre = allCarre[a]
+				unCarre.classList.add("cursor")
+				if (0 <= a <= 4) {
+					console.log(unCarre)
+					unCarre.addEventListener("click", function () {
+						console.log(unCarre)
+						unCarre.style.backgroundColor = "white"
+					})
+				}
+				else if (5 <= a <= 9) {
+					console.log(unCarre)
+					unCarre.addEventListener("click", function () {
+						console.log(unCarre)
+						unCarre.style.backgroundColor = "black"
+					})
+				}
+				else {
+					console.log(unCarre)
+					unCarre.addEventListener("click", function () {
+						console.log(unCarre)
+						unCarre.style.backgroundColor = "yellow"
+					})
+				}
 
-		console.log("a")
+				/*
+				var allCarre = document.getElementsByClassName("carre")
+				allCarre.addEventListener("click", function () {
+					for (a = 0; a < allCarre.length; a++) {
+						unCarre = allCarre[a]
+						unCarre.classList.add("cursor")
+						if (0 <= a <= 4) {
+							unCarre.style.backgroundColor = "white"
+							console.log(unCarre)
+						}
+						else if (5 <= a <= 9) {
+							unCarre.style.backgroundColor = "black"
+							console.log(unCarre)
+						}
+						else {
+							unCarre.style.backgroundColor = "yellow"
+							console.log(unCarre)
+						}
+					}
+				})
+				*/
+
+				/*console.log(a)
+				console.log(0 <= a && a <= 4)
+				console.log(allCarre)
+				console.log(allCarre[a])*/
+			}
+		}
 	</script>
 
 </body>

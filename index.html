@@ -107,6 +107,40 @@
 				}())
 
 				/*
+
+				Autre tentaive non fonctionnel
+
+				function carreSmiley() {
+					var allCarre = document.getElementsByClassName("carre")
+					for (a = 0; a < allCarre.length; a++){
+						(function() {
+							allCarre[a].classList.add("cursor")
+							unCarre = allCarre[a]
+							allCarre[a].addEventListener("click", function (){
+								console.log(unCarre);
+								if (0 <= a <= 4) {
+									allCarre[a].style.backgroundColor = null
+									allCarre[a].style.backgroundColor = "white"
+									allCarre[a].classList.remove("cursor")
+								}
+								else if (5 <= a <= 9) {
+									allCarre[a].style.backgroundColor = null
+									allCarre[a].style.backgroundColor = "black"
+									allCarre[a].classList.remove("cursor")
+								}
+								else {
+									allCarre[a].style.backgroundColor = null
+									allCarre[a].style.backgroundColor = "yellow"
+									allCarre[a].classList.remove("cursor")
+							}
+							})
+						}())
+					}
+				}
+						
+				*/
+
+				/*
 				var allCarre = document.getElementsByClassName("carre")
 				allCarre.addEventListener("click", function () {
 					for (a = 0; a < allCarre.length; a++) {
